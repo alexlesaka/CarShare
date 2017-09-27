@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Group.GroupActivity">
+
+    <LinearLayout
+        android:id="@+id/group_chat_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/group_chat_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@android:color/white" />
+
+        <Button
+            android:id="@+id/group_chat_sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/icon_send_white"
+            android:paddingLeft="8dp"
+            android:text="@string/button_send"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/group_chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/group_chat_input_layout"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical"/>
+</RelativeLayout>

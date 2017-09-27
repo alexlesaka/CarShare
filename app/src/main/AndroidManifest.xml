@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alexlesaka.carshare">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".controllers.MainController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.Initialization.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.Initialization.UsernameActivity" />
+        <activity
+            android:name=".activities.Initialization.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.User.UserActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Initialization.MainActivity" />
+        </activity>
+        <activity android:name=".activities.User.UserEditActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.User.UserActivity" />
+        </activity>
+        <activity android:name=".activities.User.AllUsersActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Initialization.MainActivity" />
+        </activity>
+        <activity android:name=".activities.Friendship.FriendListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Initialization.MainActivity" />
+        </activity>
+        <activity android:name=".activities.Friendship.FriendshipRequestListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Initialization.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.Group.CreateGroupActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.Group.AddMemberToGroupActivity"
+            android:label="@string/title_activity_add_member"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Group.GroupActivity" />
+        </activity>
+
+        <activity android:name=".activities.Group.CreateEventActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Group.GroupActivity" />
+        </activity>
+
+        <activity android:name=".activities.Group.GroupActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.Initialization.MainActivity" />
+        </activity>
+        <activity android:name=".activities.Group.SelectMemberActivity" />
+
+    </application>
+
+</manifest>

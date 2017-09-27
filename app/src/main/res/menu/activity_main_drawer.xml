@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/menu_title_users">
+        <menu>
+            <item
+                android:id="@+id/nav_allusers"
+                android:icon="@drawable/icon_users_black"
+                android:title="@string/menu_find_users" />
+            <item
+            android:id="@+id/nav_friendlist"
+            android:icon="@drawable/icon_users_black"
+            android:title="@string/menu_friends" />
+            <item
+                android:id="@+id/nav_friendshiprequests"
+                android:icon="@drawable/icon_addperson_black"
+                android:title="@string/menu_friendshiprequests"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_title_groups">
+        <menu>
+            <item
+                android:id="@+id/nav_createGroup"
+                android:icon="@drawable/icon_addgroup_black"
+                android:title="@string/menu_create_group" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_title_friendship">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_signout"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/sign_out" />
+
+</menu>
